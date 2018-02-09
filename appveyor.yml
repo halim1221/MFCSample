@@ -1,0 +1,15 @@
+version: 1.0.{build}
+branches:
+  only:
+  - master
+configuration: Release
+build:
+  verbosity: minimal
+artifacts:
+- path: x64\Release\
+  name: Release
+deploy:
+- provider: GitHub
+  auth_token:
+    secure: $(DEPLOY_GITHUB_TOKEN) 
+  artifact: Release
