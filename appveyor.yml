@@ -13,5 +13,5 @@ artifacts:
 deploy:
 - provider: GitHub
   auth_token:
-    secure: $(DEPLOY_GITHUB_TOKEN) 
+    secure: A76YZrze6xopKjjUoIVUa7dAVmnQFEYGK614uKMLY9WxswlFE5dR1rslJaMtSi7z 
   artifact: Release
