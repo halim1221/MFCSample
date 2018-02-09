@@ -1,6 +1,6 @@
 version: '{build}'
 init:
-- ps: Update-AppveyorBuild -Version "1.0.$(Get-Date -format yyyyMM + ([string]$env:appveyor_build_number).PadLeft(2, '0'))"
+- ps: Update-AppveyorBuild -Version "1.0.$((Get-Date -format yyyyMM) + ([string]$env:appveyor_build_number).PadLeft(2, '0'))"
 branches:
   only:
   - master
