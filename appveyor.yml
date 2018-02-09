@@ -1,4 +1,6 @@
-version: 1.0.$(date +"%Y%m%d")$(printf "%02d" {build})
+version: '{build}'
+init:
+  - ps: "1.$(Get-Date -format yyyy.M).$env:appveyor_build_number"
 branches:
   only:
   - master
